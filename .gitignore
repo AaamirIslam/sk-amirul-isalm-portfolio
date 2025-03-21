@@ -1,11 +1,34 @@
-# Ignore backups and uploads
-wp-content/backup/
+# Ignore WordPress core files
+wp-admin/
+wp-includes/
+
+# Ignore sensitive files
+wp-config.php
+.env
+
+# Ignore user-uploaded content
 wp-content/uploads/
 wp-content/cache/
+wp-content/backup-db/
+wp-content/upgrade/
+wp-content/debug.log
 
-# Ignore unnecessary files
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log
+*.sql
+*.tar.gz
+*.zip
+
+# Ignore IDE/editor settings
+.idea/
+.vscode/
+
+# Ignore Composer & Node.js dependencies
 node_modules/
 vendor/
-*.log
-.htaccess
-.DS_Store
+
+# Keep only custom themes and plugins
+!wp-content/themes/your-custom-theme/
+!wp-content/plugins/your-custom-plugin/
